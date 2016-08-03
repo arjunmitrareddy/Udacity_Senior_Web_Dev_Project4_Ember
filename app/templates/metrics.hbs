@@ -1,0 +1,17 @@
+
+<div class="row">
+    {{metric-line}} {{metric-bar}}
+</div>
+{{log issues}}
+{{log issues.length}}
+<div class="row">
+    <div class="col-xs-12 col-sm-offset-4 col-sm-4 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4 viewPanel">
+        <div class="panel panel-default">
+            <div class="panel-heading centerBody metricIssuePanelHeading">Number of Open Issues: {{issues.length}}</div>
+            <div class="panel-body centerBody">
+                  <button type="button" class="btn btn-default" {{action 'switchIssues'}} >View Open Issues</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{outlet}}

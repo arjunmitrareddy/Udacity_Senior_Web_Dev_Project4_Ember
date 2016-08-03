@@ -19,6 +19,16 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
-
+  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+  app.import('bower_components/bootstrap/dist/css/bootstrap-theme.css');
+  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+  app.import('bower_components/d3/d3.js');
+  app.import('bower_components/topojson/topojson.js');
+  app.import('bower_components/jquery-csv/src/jquery.csv.js');
+  app.import('bower_components/datamaps/dist/datamaps.world.min.js');
+  app.import('bower_components/highcharts/highcharts.js');
+  app.import('bower_components/highcharts/highcharts-more.js');
+  app.import('bower_components/highcharts/modules/exporting.js');
+  app.import('bower_components/lodash/dist/lodash.js');
   return app.toTree();
 };

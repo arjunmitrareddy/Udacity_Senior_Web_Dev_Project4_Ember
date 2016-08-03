@@ -1,0 +1,25 @@
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icbar"></span>
+            </button>
+            <a class="navbar-brand">AMR</a>
+        </div>
+        <div class="collapse navbar-collapse" id="menu-collapse">
+            <ul class="nav navbar-nav">
+                <li>{{link-to 'Geospatial View' 'geo' class='navstate'}}</li>
+                <li>{{link-to 'Metrics' 'metrics' class='navstate'}}</li>
+                <li>{{link-to 'Issues' 'issues' class='navstate'}}</li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" id="viewField">
+  {{outlet}}
+</div>

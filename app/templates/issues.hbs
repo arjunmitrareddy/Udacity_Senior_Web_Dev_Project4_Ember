@@ -1,0 +1,126 @@
+<div class="row geoRow">
+    <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10 geoRow">
+        <table class="route-table rwd-table table">
+            <tr>
+                <th>
+                    <button type="button" class="btn" {{action 'sort' 'a' _issues.key true}}>
+                        Submission Timestamp
+                      {{#if _sort._a}}
+                        {{#if _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        {{/if}}
+                      {{else if _sort._a}}
+                        {{#if not _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        {{/if}}
+                      {{/if}}
+                    </button>
+                </th>
+                <th>
+                    <button type="button" class="btn" {{action 'sort' 'b' _issues.key true}}>
+                        Customer Name
+                      {{#if _sort._b}}
+                        {{#if _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        {{/if}}
+                      {{else if _sort._b}}
+                        {{#if not _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        {{/if}}
+                      {{/if}}
+                    </button>
+                </th>
+                <th>
+                    <button type="button" class="btn" {{action 'sort' 'c' _issues.key true}}>
+                        Customer Email
+                      {{#if _sort._c}}
+                        {{#if _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        {{/if}}
+                      {{else if _sort._c}}
+                        {{#if not _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        {{/if}}
+                      {{/if}}
+                    </button>
+                </th>
+                <th>
+                    <button type="button" class="btn" {{action 'sort' 'd' _issues.key true}}>
+                        Description
+                      {{#if _sort._d}}
+                        {{#if _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        {{/if}}
+                      {{else if _sort._d}}
+                        {{#if not _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        {{/if}}
+                      {{/if}}
+                    </button>
+                </th>
+                <th>
+                    <button type="button" class="btn" {{action 'sort' 'e' _issues.key true}}>
+                        Status
+                      {{#if _sort._e}}
+                        {{#if _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        {{/if}}
+                      {{else if _sort._e}}
+                        {{#if not _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        {{/if}}
+                      {{/if}}
+                    </button>
+                </th>
+                <th>
+                    <button type="button" class="btn" {{action 'sort' 'f' _issues.key true}}>
+                        Closed Timestamp
+                      {{#if _sort._f}}
+                        {{#if _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        {{/if}}
+                      {{else if _sort._f}}
+                        {{#if not _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        {{/if}}
+                      {{/if}}
+                    </button>
+                </th>
+                <th>
+                    <button type="button" class="btn" {{action 'sort' 'g' _issues.key true}}>
+                        Employee Name
+                      {{#if _sort._g}}
+                        {{#if _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        {{/if}}
+                      {{else if _sort._g}}
+                        {{#if not _sort._sortSet}}
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        {{/if}}
+                      {{/if}}
+                    </button>
+                </th>
+            </tr>
+          {{#each _issues.key as |issue|}}
+            <tr class="table-hover" style="text-align: left">
+                  <td data-th="Submission Timestamp">{{issue.stimestamp}}</td>
+                  <td data-th="Customer Name">{{issue.customername}}</td>
+                  <td data-th="Customer Email">{{issue.customeremail}}</td>
+                  <td data-th="Description">{{issue.description}}</td>
+                {{#if issue.status}}
+                  <td data-th="Status">Closed</td>
+                {{else}}
+                  <td data-th="Status">Open</td>
+                {{/if}}
+                {{#if issue.closedtimestamp}}
+                  <td data-th="Closed Timestamp">{{issue.closedtimestamp}}</td>
+                {{else}}
+                  <td data-th="Closed Timestamp">N/A</td>
+                {{/if}}
+                  <td data-th="Employee Name">{{issue.employeename}}</td>
+            </tr>
+          {{/each}}
+        </table>
+    </div>
+</div>
+{{outlet}}
