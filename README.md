@@ -1,7 +1,11 @@
-# Corporate-dashboard-ember
+# Corporate Dashboard
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+ Corporate Dashboard application, with Real-Time Updated data using Socket Programming. Application fetches data from CSV, JSON files which are modified on the server every few seconds and the modified data is updated on the Client via Sockets. The project has been in implemented in two frameworks - Angular, Ember
+
+##[DEMO (Angular Version)](https://dashboard-amr.herokuapp.com)
+###[Angular Repository] (https://raw.githubusercontent.com/arjunmitrareddy/Udacity_Senior_Web_Dev_Project4)
+##[DEMO (Ember)**] (https://dashboard-amr-ember.herokuapp.com/) 
+#####**Ember Version Currently Missing Live Updates
 
 ## Prerequisites
 
